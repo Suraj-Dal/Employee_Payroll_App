@@ -27,5 +27,36 @@
                 <a href="../pages/EmployeePayrollApp.html" class="add-button">
                     <img src="Images/add-24px.svg" alt="">Add User</a>
         </div>
+        <div class="table main">
+            <table id="table-display" class="table">
+                <!-- UC3: to view Employee Payroll details in a Tabular Format.-->
+                <tr>
+                    <th></th>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>Department</th>
+                    <th>Salary</th>
+                    <th>Start Date</th>
+                    <th>Actions</th>
+                </tr>
+                <tr class="details">
+                    <td><img class="profile" alt=""
+                        src="Images/male.png">
+                    </td>
+                    <td>Suraj Dal</td>
+                    <td>Male</td>
+                    <td><div class="dept-label">Engineer</div></td>
+                    <td>300000</td>
+                    <td>10 May 2022</td>
+                    <td>
+                        <img id="1" onclick="remove(this)" alt="delete"
+                             src="Images/delete.svg">
+                        <img id="1" onclick="update(this)" alt="edit"
+                             src="Images/create.svg">
+                    </td>
+                </tr>
+            </table>
+        </div> 
+    </div>
     </body>
 </html>
