@@ -5,7 +5,7 @@ function Validate()
     if(userid == "admin" && password == "admin")
     {
         alert("Login Successful.")
-        window.location.href="../Home.html";
+        window.open('../Home.html');
     }
     else
     {

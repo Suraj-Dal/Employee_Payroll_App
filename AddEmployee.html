@@ -6,8 +6,9 @@
         <link rel="stylesheet" href="css/addemployeestyle.css">
         <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Josefin+Sans:wght@300&family=Pacifico&display=swap" rel="stylesheet">    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
         <link rel="icon" href="../assets/images/logo.png">
-        <title>Employee Payroll App</title>
-        <script src="Javascript/addemployee.js"></script> 
+        <title>Add Employee</title>
+        <script src="Javascript/errorEvent.js"></script> 
+        <script src="Javascript/EmployeeModel.js"></script>
     </head>
     <body>
         <header>
@@ -25,6 +26,7 @@
                 <div class="row-content">
                     <label class="name">Name</label>
                     <input class="nameinput" type="text" id="name" name="name" placeholder="Type Name" required>
+                    <error-output class="name-error" for="name"></error-output>
                 </div>
                 <div class="row-content">
                     <label class="name">Profile</label>
@@ -78,9 +80,17 @@
                 <div class="row-content">
                     <label class="name" for="salary">Salary</label>
                     <input class="range" type="range" name="salary" id="salary" min="300000" max="500000" 
-                    step="100" value="400000">
-                    <output class="salary" for="salary">400000</output>
+                    step="1000" value="400000">
+                    <output class="salary-output" for="salary">400000</output>
                 </div>
+                <script>
+                    const slider = document.getElementById("salary");
+                    const value = document.querySelector(".salary-output");
+                    value.textContent = slider.value;
+                    slider.oninput = function(){
+                        value.textContent = this.value;
+                    }
+                </script>
                 <div class="date-select">
                     <label class="name" for="startDate">Start Date</label>
                     <div class="select" id="date">
@@ -147,13 +157,14 @@
                     <textarea id="notes" class="note" name="Notes" placeholder="" style="height:100px"></textarea>
                 </div>
                 <div class="row-content">
-                    <a href="AddEmployee.html" class="cancel">Cancel</a>
-                    <button type="submit" class="submit" id="submitButton">Submit</button>
+                    <a href="Home.html" class="cancel">Cancel</a>
+                    <button type="submit" class="submit" id="submitButton" onclick="AddEmployee()">Submit</button>
                     <button type="reset" class="reset">Reset</button>
                 </div>
             </form>
         </div>
             </form>
         </div>
+       
     </body>
 </html>
