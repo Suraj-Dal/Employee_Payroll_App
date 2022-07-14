@@ -96,7 +96,7 @@ label
 {
     transform: scale(1.1);
 }
-.text
+.radio-text, .text
 {
     font: normal normal 900 15px/25px 'Josefin Sans';
 }
