@@ -7,9 +7,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Josefin+Sans:wght@300&family=Pacifico&display=swap" rel="stylesheet">    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
         <link rel="icon" href="../assets/images/logo.png">
         <title>Add Employee</title>
-        <script src="Javascript/errorEvent.js"></script> 
+        <script src="Javascript/EventListener.js"></script> 
         <script src="Javascript/EmployeeModel.js"></script>
-        <script src="Javascript/localstorage.js"></script>
     </head>
     <body>
         <header>
@@ -22,7 +21,7 @@
             </div>
         </header>
         <div id="formid" class="form-content">
-            <form class="form">
+            <form class="form" action="#" onsubmit="save()" onreset="resetForm()">
                 <div class="form-head">Employee Payroll Form</div>
                 <div class="row-content">
                     <label class="name">Name</label>
@@ -33,33 +32,33 @@
                     <label class="name">Profile</label>
                     <div class="profile">
                         <label> 
-                            <input class="input" type="radio" id="profile" name="profile" value="../assets/Profile-images/Ellipse -3.png" required> 
+                            <input class="input" type="radio" id="profile" name="profile" value="Images/Ellipse -1.png" required> 
                             <img class="image" id='imagel' src="Images/Ellipse -1.png"> 
                         </label> 
                         <label> 
-                            <input class="input" type="radio" id="profile" name="profile" value="../assets/Profile-images/Ellipse -1.png" required> 
+                            <input class="input" type="radio" id="profile" name="profile" value="Images/Ellipse -2.png" required> 
                             <img class="image" id='image2' src="Images/Ellipse -2.png"> 
                         </label>
                         <label> 
-                            <input class="input" type="radio" id="profile" name="profile" value="../assets/Profile-images/Ellipse -8.png" required> 
+                            <input class="input" type="radio" id="profile" name="profile" value="Images/Ellipse -3.png" required> 
                             <img class="image" id='image3' src="Images/Ellipse -3.png"> 
                         </label> 
                         <label> 
-                            <input class="input" type="radio" id="profile" name="profile" value="../assets/Profile-images/Ellipse -7.png" required> 
+                            <input class="input" type="radio" id="profile" name="profile" value="Images/Ellipse -4.png" required> 
                             <img class="image" id='image4' src="Images/Ellipse -4.png"> 
                         </label>
                         <label> 
-                            <input class="input" type="radio" id="profile" name="profile" value="../assets/Profile-images/Ellipse -7.png" required> 
-                            <img class="image" id='image4' src="Images/Ellipse -5.png"> 
+                            <input class="input" type="radio" id="profile" name="profile" value="Images/Ellipse -5.png" required> 
+                            <img class="image" id='image5' src="Images/Ellipse -5.png"> 
                         </label>
                     </div>
                 </div>
                 <div class="row-content">
                     <label class="name" for="gender">Gender</label>
                     <div>
-                        <input type="radio" id="gender" name="gender" value="male">
+                        <input type="radio" id="gender" name="gender" value="Male">
                         <label class="radio-text" for="male">Male</label>
-                        <input type="radio" id="gender" name="gender" value="female">
+                        <input type="radio" id="gender" name="gender" value="Female">
                         <label class="radio-text" for="female">Female</label>
                     </div>
                 </div>
@@ -159,13 +158,11 @@
                 </div>
                 <div class="row-content">
                     <a href="Home.html" class="cancel">Cancel</a>
-                    <button type="submit" class="submit" id="submitButton" onclick="AddEmployee()">Submit</button>
+                    <button type="submit" class="submit" id="submitButton">Submit</button>
                     <button type="reset" class="reset">Reset</button>
                 </div>
             </form>
         </div>
-            </form>
-        </div>
-       
+        
     </body>
 </html>
