@@ -21,8 +21,12 @@
             </div>
         </header>
         <div id="formid" class="form-content">
-            <form class="form" action="#" onsubmit="save()" onreset="resetForm()">
+            <form class="form" action="#" onsubmit="save(event)" onreset="resetForm()">
                 <div class="form-head">Employee Payroll Form</div>
+                <div class="row-content">
+                    <label class="name" for="id">ID</label>
+                    <input class="idinput" type="text" id="id" name="id" placeholder="Enter ID" required>
+                </div>
                 <div class="row-content">
                     <label class="name">Name</label>
                     <input class="nameinput" type="text" id="name" name="name" placeholder="Type Name" required>
@@ -150,6 +154,7 @@
                             <option value="2017">2017</option>
                             <option value="2016">2016</option>
                         </select>
+                        <error-output class="date-error" for="name"></error-output>
                     </div>
                 </div>
                 <div class="row-content">

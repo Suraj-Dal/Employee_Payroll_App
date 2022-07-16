@@ -68,7 +68,7 @@ const getEmployeeData = () => {
 }
 
 const createInnerHTML = () => {
-    const headerHtml = "<th></th><th>Name</th><th>Gender</th><th>Department</th>"+
+    const headerHtml = "<th></th><th>ID</th><th>Name</th><th>Gender</th><th>Department</th>"+
                      "<th>Salary</th><th>Start Date</th><th>Actions</th>";
     if (empPayrollList.length == 0) return;
     let innerHtml = `${headerHtml}`;
@@ -78,6 +78,7 @@ const createInnerHTML = () => {
         <td><img class="profile" alt="" 
                   src="${empPayrollData._profilePic}">
         </td>
+        <td>${empPayrollData._id}</td>
         <td>${empPayrollData._name}</td>
         <td>${empPayrollData._gender}</td>
         <td>${getDeptHtml(empPayrollData._department)}</td>

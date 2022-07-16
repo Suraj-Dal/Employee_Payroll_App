@@ -73,11 +73,29 @@ header
     font-size: 12px;
     font-style: italic;
     color: red;
+    font-family: 'Josefin Sans', sans-serif;
 }
 label 
 {
     padding: 12px 12px 12px 0;
     display: inline-block; 
+}
+.idinput
+{
+    width: 80%; 
+    padding: 12px; 
+    border: 1px solid #ccc;
+    border-radius: 4px; 
+    resize: vertical; 
+    font: normal normal normal 15px/25px 'Josefin Sans';
+}
+.idinput:hover
+{
+    border: 2px solid rgb(0, 0, 0);
+}
+.nameinput:hover
+{
+    border: 2px solid rgb(0, 0, 0);
 }
 .nameinput
 {
@@ -114,6 +132,13 @@ label
     display: flex;
     flex-direction: row;
     font: normal normal 900 18px/28px 'Josefin Sans';
+}
+.date-error
+{
+    margin-left: 10px;
+    font-size: 12px;
+    font-style: italic;
+    color: red;
 }
 .salary-output
 {

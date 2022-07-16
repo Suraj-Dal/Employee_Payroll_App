@@ -1,4 +1,5 @@
-const siteProperties ={
-    homePage: "../pages/Employee_HomePage.html",
-    addEmployee: "../pages/Employee_Form.html"
+const SiteProperties = {
+    LoginPage: "../login.html",
+    HomePage: "../Home.html",
+    AddEmployee: "../AddEmployee.html"
 };

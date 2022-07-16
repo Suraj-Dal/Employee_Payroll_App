@@ -4,9 +4,22 @@ const stringifyDate = (date) =>{
     return newDate;
 }
 
-const update = (node) =>{
-    let employeeData = employeePayrollList.find(empData => empData._id == node.id);
+function update(node)
+{
+    let employeeData = empPayrollList.find(empData => empData._id == node.id);
     if(!employeeData){return;} 
-    localStorage.setItem('editEmployee', JSON.stringify(employeeData));
-    window.location.replace(siteProperties.addEmployee);
+    localStorage.setItem('editEmp', JSON.stringify(employeeData));
+    window.open(SiteProperties.AddEmployee);
+}
+
+function remove(node)
+{
+    let empData = empPayrollList.find(emp => emp._id == node.id);
+    if (!empData)
+    return;
+    const index = empPayrollList.map(emp => emp._id).indexOf(empData._id);
+    empPayrollList.splice(index, 1);
+    localStorage.setItem("EmployeePayrollList", JSON.stringify(empPayrollList));
+    createInnerHTML();
+    window.location.replace(SiteProperties.HomePage);
 }
